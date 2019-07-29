@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
-import SearcPanel from './components/SearchPanel/SearcPanel';
+import SearcPanel from './components/SearchPanel';
+import VideoList from './components/VideoList';
+import MainVideo from './components/MainVideo';
+import WacthHistory from './components/WatchHistory';
 import YTSearch from 'youtube-api-search';
-import VideoList from './components/VideoList/VideoList';
-import MainVideo from './components/MainVideo/MainVideo';
-import WacthHistory from './components/WatchHistory/WacthHistory';
+
 const API_KEY = 'AIzaSyBdVut9QCzqAHBzfDEh30yUp4E529som6s';
 
 class App extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       videos: [],
       selectedVideo: null,
     };
-
-    this.videoSearch('React Tutorials');
+    this.videoSearch('ciclum kyiv');
   }
 
   videoSearch(searchTerm) {

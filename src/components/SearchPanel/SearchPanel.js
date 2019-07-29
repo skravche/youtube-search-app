@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class SearcPanel extends Component {
+class SearchPanel extends Component {
   constructor(props) {
     super(props);
     this.state = { term: '' };
@@ -21,4 +21,4 @@ class SearcPanel extends Component {
   }
 }
 
-export default SearcPanel;
+export default SearchPanel;
