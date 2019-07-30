@@ -3,7 +3,12 @@ import { Router } from 'express';
 const router = Router();
 
 router.get('/', async (req, res) => {
-  const videos = await req.context.models.Video.find({});
+  const videos = await req.context.models.Video.find().select({
+    _id: 0,
+    id: 1,
+    title: 1,
+    description: 1,
+  });
 
   return res.send(videos);
 });
