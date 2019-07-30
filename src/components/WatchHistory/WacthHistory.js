@@ -35,7 +35,7 @@ export class WacthHistory extends Component {
   render() {
     const { isLoaded, items } = this.state;
     if (!isLoaded) {
-      return <div className="watched-hisory">Loading the data... ;(</div>;
+      return <div className="watched-hisory">Data loading... ;(</div>;
     } else {
       return (
         <div className="watched-hisory">

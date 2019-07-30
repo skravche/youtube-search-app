@@ -1,13 +1,15 @@
 .main-vid {
-  border: 1px solid grey;
+  border: 1px solid lightgray;
   border-radius: 3px;
-  padding: 10px;
-  max-width: 50%;
+  padding: 5px;
+  justify-content: center;
+  margin: 0 5px 0 5px;
 }
 .details {
-  text-align: center;
+  display: absolute;
 }
 .text-datails {
-  display: relative;
-  text-align: center;
+  width: auto;
+  max-width: 600px;
+  min-height: 100%;
 }

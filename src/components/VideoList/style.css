@@ -1,3 +1,4 @@
 .list-all {
-  max-width: 80%;
+  min-height: 100%;
+  margin: 0 5px 0 5px;
 }
