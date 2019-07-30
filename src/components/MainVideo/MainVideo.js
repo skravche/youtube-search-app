@@ -6,7 +6,7 @@ const MainVideo = props => {
   const video = props.video;
 
   if (!video) {
-    return <div>Loading...</div>;
+    return <div className="main-vid">Loading...</div>;
   }
 
   const videoId = video.id.videoId;

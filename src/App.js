@@ -5,7 +5,7 @@ import MainVideo from './components/MainVideo';
 import WacthHistory from './components/WatchHistory';
 import YTSearch from 'youtube-api-search';
 
-const API_KEY = 'AIzaSyBdVut9QCzqAHBzfDEh30yUp4E529som6s';
+const _API_KEY = 'AIzaSyB1kvnabk0cnReJaa1meI-PjnlsT8YqgPY';
 
 class App extends Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   videoSearch(searchTerm) {
-    YTSearch({ key: API_KEY, term: searchTerm }, data => {
+    YTSearch({ key: _API_KEY, term: searchTerm }, data => {
       console.log(data);
       this.setState({
         videos: data,

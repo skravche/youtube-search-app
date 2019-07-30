@@ -29,7 +29,7 @@ export class WacthHistory extends Component {
 
   handleClick = async value => {
     console.log(JSON.stringify(value, 0, 2));
-    addVideo(value);
+    // delVideo(value);
   };
 
   render() {

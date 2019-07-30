@@ -9,12 +9,12 @@ MongoClient.connect(url, { useNewUrlParser: true }, (err, client) => {
 
   const db = client.db('testdb');
 
-  let doc = { _id: new ObjectID(), title: 'vid3', text: 'about ...' };
+  let doc = { _id: new ObjectID(), title: 'vid3', text: 'about...' };
 
-  db.collection('cars')
+  db.collection('vids')
     .insertOne(doc)
     .then(doc => {
-      console.log('Car inserted');
+      console.log('add!');
       console.log(doc);
     })
     .catch(err => {
