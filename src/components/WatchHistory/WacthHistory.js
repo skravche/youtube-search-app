@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getVideos, addVideo } from '../../api';
+import { getVideos, addVideo, delVideo } from '../../api';
 import './style.css';
 
 export class WacthHistory extends Component {
@@ -29,7 +29,7 @@ export class WacthHistory extends Component {
 
   handleClick = async value => {
     console.log(JSON.stringify(value, 0, 2));
-    // delVideo(value);
+    delVideo(value);
   };
 
   render() {
