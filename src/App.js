@@ -5,7 +5,7 @@ import MainVideo from './components/MainVideo';
 import WacthHistory from './components/WatchHistory';
 import YTSearch from 'youtube-api-search';
 
-const _API_KEY = 'AIzaSyB1kvnabk0cnReJaa1meI-PjnlsT8YqgPY';
+const _API_KEY = 'AIzaSyBdVut9QCzqAHBzfDEh30yUp4E529som6s'; //AIzaSyCAJiqovaCAKuMXBJy0xOTAdqBXD7f3jn4
 
 class App extends Component {
   constructor(props) {
