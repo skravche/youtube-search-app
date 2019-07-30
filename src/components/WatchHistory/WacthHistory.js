@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { getVideos, addVideo } from '../../api';
+import './style.css';
 
 export class WacthHistory extends Component {
   constructor(props) {
@@ -26,15 +27,18 @@ export class WacthHistory extends Component {
       });
   }
 
-  handleClick() {}
+  handleClick = async value => {
+    console.log(JSON.stringify(value, 0, 2));
+    addVideo(value);
+  };
 
   render() {
     const { isLoaded, items } = this.state;
     if (!isLoaded) {
-      return <div>Loading the data...</div>;
+      return <div className="watched-hisory">Loading the data... ;(</div>;
     } else {
       return (
-        <div>
+        <div className="watched-hisory">
           {items.map(items => (
             <ul key={items.id}>
               <li>{items.title}</li>

@@ -14,8 +14,13 @@ class SearchPanel extends Component {
 
   render() {
     return (
-      <div className="search-bar">
-        <input value={this.state.term} onChange={this.onInputChange} />
+      <div className="input-header">
+        <input
+          className="input-header input-group mb-3"
+          value={this.state.term}
+          onChange={this.onInputChange}
+          name="search"
+        />
       </div>
     );
   }

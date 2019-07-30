@@ -29,10 +29,13 @@ class App extends Component {
   render() {
     return (
       <div>
+        <header>
+          <h1>Youtube Search App</h1>
+        </header>
         <SearcPanel
           onSearchTermChange={searchTerm => this.videoSearch(searchTerm)}
         />
-        <section className="row">
+        <section className="main-block">
           <WacthHistory />
           <MainVideo video={this.state.selectedVideo} />
           <VideoList

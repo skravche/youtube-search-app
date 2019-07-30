@@ -1,0 +1,13 @@
+.main-vid {
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 10px;
+  max-width: 50%;
+}
+.details {
+  text-align: center;
+}
+.text-datails {
+  display: relative;
+  text-align: center;
+}

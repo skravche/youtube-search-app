@@ -1,5 +1,6 @@
 import React from 'react';
 import Iframe from 'react-iframe';
+import './style.css';
 
 const MainVideo = props => {
   const video = props.video;
@@ -17,9 +18,9 @@ const MainVideo = props => {
   };
 
   return (
-    <div className="col-md-8">
+    <div className="main-vid">
       <Iframe
-        onPlay={videoPlayed} // defaults -> noop
+        onPlay={videoPlayed}
         url={url}
         width="600px"
         height="350px"
@@ -29,8 +30,8 @@ const MainVideo = props => {
         position="relative"
       />
       <div className="details">
-        <div>{video.snippet.title}</div>
-        <div>{video.snippet.description}</div>
+        <div className="text-datails">{video.snippet.title}</div>
+        <div className="text-datails">{video.snippet.description}</div>
       </div>
     </div>
   );
