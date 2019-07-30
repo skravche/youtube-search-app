@@ -1,0 +1,5 @@
+{
+"Logger":{
+	"logFile":"/tmp/node-express-seed-project-dev.log"
+}
+}
