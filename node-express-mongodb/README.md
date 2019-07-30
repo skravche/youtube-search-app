@@ -1,102 +1,56 @@
-# node-express-seed-project
-RESTful application using nodejs, expressjs and mongodb
+# Simple Node with Express + MongoDB Server
 
-<h2>Objective</h2>
+[![Build Status](https://travis-ci.org/rwieruch/node-express-mongodb-server.svg?branch=master)](https://travis-ci.org/rwieruch/node-express-mongodb-server) [![Slack](https://slack-the-road-to-learn-react.wieruch.com/badge.svg)](https://slack-the-road-to-learn-react.wieruch.com/) [![Greenkeeper badge](https://badges.greenkeeper.io/rwieruch/node-express-mongodb-server.svg)](https://greenkeeper.io/)
 
-The objective of the project is to create a basic structure for a RESTful application using nodejs, expressjs and mongodb.
+An easy way to get started with a Express server with MongoDB with Node.js. [Read more about it.](https://www.robinwieruch.de/mongodb-express-setup-tutorial/)
 
-<h2>Prerequisite</h2>
-<br>
-Download and install nodejs (https://nodejs.org/en/)
-<br>
-Download and install mongodb (https://www.mongodb.org/downloads#production)
+## Features
 
-<h2>Environment</h2>
+* Babel 7
+* Environment Variables
+* Express
+* REST API
+* MongoDB
 
-Windows
-<br>
-Git Bash
-<br>
-Postman chrome pulgin
+## Requirements
 
-<h2>Highlights</h2>
+* [node & npm](https://nodejs.org/en/)
+* [git](https://www.robinwieruch.de/git-essential-commands/)
 
-<br>
-Logger based on Winston
-<br>
-Environment based configuration using config(https://www.npmjs.com/package/config#introduction)
+## Installation
 
+* `git clone git@github.com:rwieruch/node-express-mongodb-server.git`
+* `cd node-express-mongodb-server`
+* `npm install`
+* [start MongoDB](https://www.robinwieruch.de/mongodb-express-setup-tutorial/)
+* `npm start`
+* optional: include *.env* in your *.gitignore*
 
-<h2>Running the application</h2>
+### GET Routes
 
-<ul>
-<li>Clone the project</li>
-<br>
-Open Git Bash
-<br>
-$ cd &lt;basepath&gt;
-<br>
-$ git clone https://github.com/guptam2/node-express-mongodb-seed-project.git
-<br>
-<br>
-<li>Install node modules</li>
-<br>
-$ cd &lt;basepath&gt;/node-express-mongodb-seed-project
-<br>
-$ npm install
-<br>
-<br>
-<li>Start mongodb</li>
-<br>
-Open Git Bash
-<br>
-$ cd "/c/Program Files/MongoDB/Server/3.2/bin"
-<br>
-$ mongod
-<br>
-* Mongodb folder might be different based on your installation.
-<br>
-<br>
-<li>Start nodejs server</li>
-<br>
-$ cd &lt;basepath&gt;/node-express-mongodb-seed-project
-<br>
-$ node server.js
-<br>
-<br>
-<li>Send a POST request (Postman plugin)</li>
-<br>
-<b>URL :</b> http://localhost:3000/contacts
-<br>
-<b>Request Body :</b> <p>{"firstName":"m", "lastName":"g","phone":"123456789", "addressLine1":"3 test road","addressLine2":"test city", "county":"berkshire","postcode":"tt1 2tt"}</p>
-<b>Content Type :</b> application/json
-<br>
-<br>
+* visit http://localhost:3000
+  * /messages
+  * /messages/1
+  * /users
+  * /users/1
 
-<li>Send a GET request  (Postman plugin)</li>
-<br>
-URL : http://localhost:3000/contacts
-<br>
-<br>
-<li>Config</li>
-<br>
-<p>
-Different config file can be loaded by setting the NODE_ENV environment variable. Default config file is &lt;basepath&gt;\node-express-seed-project\config\default.json
-<br>
-<br>
-e.g. $ export NODE_ENV=dev  
-<br>
-<br>
-It will load the &lt;basepath&gt;\node-express-seed-project\config\dev.json
-</p>
+### Beyond GET Routes
 
-<li>Check the log</li>
-<br>
-<p>Default log file is C:\tmp\node-express-seed-project.log</p>
-<p>
-To change the log file location modify the &lt;basepath&gt;\node-express-seed-project\config\default.json. 
-</p>
-</ul>
+#### CURL
 
+* Create a message with:
+  * `curl -X POST -H "Content-Type:application/json" http://localhost:3000/messages -d '{"text":"Hi again, World"}'`
+* Delete a message with:
+  * `curl -X DELETE -H "Content-Type:application/json" http://localhost:3000/messages/1`
 
+#### Postman
 
+* Install [Postman](https://www.getpostman.com/apps) to interact with REST API
+* Create a message with:
+  * URL: http://localhost:3000/messages
+  * Method: POST
+  * Body: raw + JSON (application/json)
+  * Body Content: `{ "text": "Hi again, World" }`
+* Delete a message with:
+  * URL: http://localhost:3000/messages/1
+  * Method: DELETE
